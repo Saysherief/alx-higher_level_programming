@@ -4,7 +4,7 @@ def uppercase(str):
     Prints a string in uppercase followed by a new line
     """
     uppercase = ""
-    for char in a str:
+    for char in str:
         if ord('a') <= ord(char) <= ord('z'):
             uppercase += chr(ord(char) - 32)
         else:
