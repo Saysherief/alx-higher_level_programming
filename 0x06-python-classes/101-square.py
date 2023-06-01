@@ -89,3 +89,17 @@ class Square:
                 print()
             for i in range(self.__size):
                 print(" " * self.position[0] + "#" * self.__size)
+
+    def __str__(self):
+        '''
+        String representation of the object
+        '''
+        if self.__size == 0:
+            return ""
+        else:
+            str_val = ""
+            for i in range(self.__position[1]):
+                str_val += "\n"
+            for i in range(self.__size):
+                str_val += (" " * self.position[0] + "#" * self.__size) + "\n"
+            return str_val.rstrip("\n")
