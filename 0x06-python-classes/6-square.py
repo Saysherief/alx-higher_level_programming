@@ -23,12 +23,14 @@ class Square:
             2 +ve integers
             ValueError: if args is less than 0
         """
+        '''
         if not isinstance(new_size, int):
             raise TypeError("size must be an integer")
         elif new_size < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.__size = new_size
+        '''
+        self.__size = new_size
         self.__position = new_position
 
     def area(self):
@@ -82,8 +84,8 @@ class Square:
             TypeError: if position is not a tuple of 2 +ve integers
         """
         if (not isinstance(value, tuple) or len(value) != 2 or not isinstance
-                (value[0], int) or not isinstance(value[1], int) or value[0] < 0 or
-                value[1] < 0):
+                (value[0], int) or not isinstance(value[1], int) or value[0]
+                < 0 or value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
