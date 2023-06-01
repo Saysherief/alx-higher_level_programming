@@ -10,31 +10,16 @@ class Square:
         __size: The size of the square (int)
         __position: The position of the square (tuple)
     """
-    def __init__(self, new_size=0, new_position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         """
         Initializes a new Square object
 
         Args:
-            new_size: The size of the new square, by default 0
-            new_posion: The position of the new square, default (0, 0)
-
-        Raises:
-            TypeError: if args is not an integer or position is not a tuple of
-            2 +ve integers
-            ValueError: if args is less than 0
+            size: The size of the new square, by default 0
+            posion: The position of the new square, default (0, 0)
         """
-        if not isinstance(new_size, int):
-            raise TypeError("size must be an integer")
-        elif new_size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = new_size
-        if (not isinstance(value, tuple) or len(value) != 2 or not isinstance
-                (value[0], int) or not isinstance(value[1], int) or value[0]
-                < 0 or value[1] < 0):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = new_position
+        self.__size = size
+        self.__position = position
 
     def area(self):
         """
