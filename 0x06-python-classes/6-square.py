@@ -18,8 +18,8 @@ class Square:
             size: The size of the new square, by default 0
             posion: The position of the new square, default (0, 0)
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """
