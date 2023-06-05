@@ -2,16 +2,14 @@
 
 
 class Rectangle:
-    """
-    A class Rectangle that defines a rectangle
+    """A class Rectangle that defines a rectangle
 
     Attributes:
-        __width: The width of the rectangle (int)
-        __height: The height of the rectangle (int)
-    """
-    def __init__(self, width=0, height=0):
+        width (int): The width of the rectangle
+        height (int): The height of the rectangle
         """
-        Initializes a new Rectangle object
+    def __init__(self, width=0, height=0):
+        """Initializes a new Rectangle object
 
         Args:
             width: The width of the new rectangle, by default 0
@@ -22,15 +20,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """
-        Gets the width of the Rectangle
-        """
+        """Gets the width of the Rectangle"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """
-        Sets the width of the Rectanglee to value
+        """Sets the width of the Rectanglee to value
 
         Args:
             value: the new width of the Rectangle
@@ -49,15 +44,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """
-        Gets the height of the Rectangle
-        """
+        """Gets the height of the Rectangle"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """
-        Sets the height of the Rectanglee to value
+        """Sets the height of the Rectanglee to value
 
         Args:
             value: the new height of the Rectangle
