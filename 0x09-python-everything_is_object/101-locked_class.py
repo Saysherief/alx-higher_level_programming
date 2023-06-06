@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''An class to save memory'''
+
+
 class LockedClass:
     '''
     prevents the user from dynamically creating new instance attributes,
