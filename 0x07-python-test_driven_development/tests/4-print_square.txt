@@ -1,1 +1,46 @@
-#Test case that I did
+#These are the test cases that I tried
+--------------------------------------
+Test for 4-print_square
+======================================
+
+import the function:
+	>>> print_square = __import__("4-print_square").print_square
+
+check for module doc:
+	>>> doc_mod = __import__("4-print_square").__doc__
+	>>> len(doc_mod) > 1
+	True
+
+check for function doc:
+	>>> doc_print = __import__("4-print_square").print_square.__doc__
+	>>> len(doc_print) > 1
+	True
+
+check for printing size >=0:
+	>>> print_square(0)
+	>>> print_square(1)
+	#
+	>>> print_square(2)
+	##
+	##
+
+check for float:
+	>>> print_square(1.5)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+check for negative input:
+	>>> print_square(-2)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+check for non integer input:
+	>>> print_square("two")
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+check for no input:
+	>>> print_square()
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	TypeError: print_square() missing 1 required positional argument: 'size'
