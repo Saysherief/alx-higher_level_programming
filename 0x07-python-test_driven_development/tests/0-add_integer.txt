@@ -52,7 +52,7 @@ check for more than required args:
 	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 check for float overflow:
-	>>> add(float('inf'), float('inf'))
+	>>> add_integer(float('inf'), float('inf'))
 	Traceback (most recent call last):
 	...
 	OverflowError: cannot convert float infinity to integer
@@ -61,4 +61,10 @@ check for float NaN
 	>>> add_integer(float('NaN'), 5)
 	Traceback (most recent call last):
 	...
-	ValueError: cannot convert float NaN to integer	
+	ValueError: cannot convert float NaN to integer
+
+check for smallest and largest integer:
+	>>> add_integer(2147483647, 1)
+	2147483648
+	>>> add_integer(-2147483648, -1)
+	-2147483649
