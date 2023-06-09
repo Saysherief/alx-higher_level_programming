@@ -1,0 +1,56 @@
+#These are the test cases that I tried
+--------------------------------------
+Test for 3-say_my_name
+======================================
+
+import the function:
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+check for module doc:
+	>>> doc_mod = __import__("3-say_my_name").__doc__
+	>>> len(doc_mod) > 1
+	True
+
+check for function doc:
+	>>> doc_say = __import__("3-say_my_name").say_my_name.__doc__
+	>>> len(doc_say) > 1
+	True
+
+check for valid inputs:
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+	>>> say_my_name("James", "Bond")
+	My name is James Bond
+	>>> say_my_name("James")
+	My name is James 
+
+check for invalid inputs
+	>>> say_my_name(, "James")
+	  File "<stdin>", line 1
+	    say_my_name(, "James")
+	                ^
+	SyntaxError: invalid syntax
+	>>> say_my_name()
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+check for empty string:
+	>>> say_my_name("")
+	My name is  
+
+check for None input:
+	>>> say_my_name(None)
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+check for numerical input:
+	>>> say_my_name("Susan", 22)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+	>>> say_my_name(22, "Sara")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
