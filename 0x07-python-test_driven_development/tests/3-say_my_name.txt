@@ -26,6 +26,7 @@ check for valid inputs:
 
 check for invalid inputs
 	>>> say_my_name(, "James")
+	Traceback (most recent call last):
 	  File "<stdin>", line 1
 	    say_my_name(, "James")
 	                ^
