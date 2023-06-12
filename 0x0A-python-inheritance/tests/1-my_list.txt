@@ -1,0 +1,26 @@
+#These are the test cases that I tried
+--------------------------------------
+Test for 1-my_list
+======================================
+
+import the class:
+	>>> MyList = __import__("1-my_list").MyList
+
+import the function:
+	>>> print_sorted = __import__("1-my_list").MyList.print_sorted
+
+check for class doc:
+	>>> doc_cls = __import__("1-my_list").MyList.__doc__
+        >>> len(doc_cls) > 1
+        True
+
+check for module doc:
+	>>> doc_mod = __import__("1-my_list").__doc__
+	>>> len(doc_mod) > 1
+	True
+
+check for function doc:
+	>>> doc_print = __import__("1-my_list").MyList.print_sorted.__doc__
+	>>> len(doc_print) > 1
+	True
+
