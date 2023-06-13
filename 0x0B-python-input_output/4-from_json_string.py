@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Method that returns an object (Python data structure) represented by a JSON string"""
+"""Method that returns an object (Python data structure)
+represented by a JSON string"""
 import json
 
 
