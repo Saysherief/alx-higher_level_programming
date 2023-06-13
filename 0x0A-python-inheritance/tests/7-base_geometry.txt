@@ -1,0 +1,31 @@
+#These are the test cases that I tried
+--------------------------------------
+Test for 7-base_geometry
+======================================
+
+import the class:
+	>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+import the function:
+	>>> area = __import__("7-base_geometry").BaseGeometry.area
+	
+	>>> integer_validator = __import__("7-base_geometry").BaseGeometry.integer_validator
+
+check for class doc:
+	>>> doc_cls = __import__("7-base_geometry").BaseGeometry.__doc__
+        >>> len(doc_cls) > 1
+        True
+
+check for module doc:
+	>>> doc_mod = __import__("7-base_geometry").__doc__
+	>>> len(doc_mod) > 1
+	True
+
+check for function doc:
+	>>> doc_area = __import__("7-base_geometry").BaseGeometry.area.__doc__
+	>>> len(doc_area) > 1
+	True
+
+	>>> doc_val = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+        >>> len(doc_val) > 1
+        True
