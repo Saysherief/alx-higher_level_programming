@@ -12,7 +12,7 @@ class Base:
         id (int): The id of the object
     """
 
-    #private class attribute to keep track of no. of objects
+    """private class attribute to keep track of no. of objects"""
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -22,7 +22,7 @@ class Base:
         Args:
             id (int): The id of the object
         """
-        if id is None: 
+        if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
         else:
