@@ -82,3 +82,12 @@ class Square(Rectangle):
         str_val = "[Square] (" + str(self.id) + ") " + str(self.x) + "/"
         str_val += str(self.y) + " - " + str(self.size)
         return str_val
+
+    def to_dictionary(self):
+        '''
+        Returns dictionary representation of the object Square
+        '''
+        return {
+                'id': self.id, 'size': self.size,
+                'x': self.x, 'y': self.y
+                }

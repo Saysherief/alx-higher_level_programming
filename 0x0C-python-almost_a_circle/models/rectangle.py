@@ -180,3 +180,13 @@ class Rectangle(Base):
         str_val += str(self.y) + " - " + str(self.width) + "/"
         str_val += str(self.height)
         return str_val
+
+    def to_dictionary(self):
+        '''
+        Returns dictionary representation of the object Rectangle
+        '''
+        return {
+                'id': self.id, 'width': self.width,
+                'height': self.height, 'x': self.x,
+                'y': self.y
+                }
