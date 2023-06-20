@@ -53,14 +53,27 @@ class Square(Rectangle):
             self.width = value
             self.height = value
 
-    def display(self):
+    def update(self, *args, **kwargs):
         '''
-        Prints the rectangle according to the given dimention
+        A public method that assigns an argument to each attribute
+        1st: id
+        2nd: size
+        3rd: x
+        4th: y
+        Updated with kwargs that assigns a key/value argument to attributes
         '''
-        for j in range(self.y):
-            print()
-        for i in range(self.height):
-            print(" " * self.x + "#" * self.width)
+        if args:
+            if len(args) > 0:
+                self.id = args[0]
+            if len(args) > 1:
+                self.size = args[1]
+            if len(args) > 2:
+                self.x = args[2]
+            if len(args) > 3:
+                self.y = args[3]
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def __str__(self):
         '''
