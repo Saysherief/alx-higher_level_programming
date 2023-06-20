@@ -142,8 +142,10 @@ class Rectangle(Base):
         '''
         Prints the rectangle according to the given dimention
         '''
+        for j in range(self.y):
+            print()
         for i in range(self.height):
-            print("#" * self.width)
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         '''
