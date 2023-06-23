@@ -89,6 +89,21 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
+    @classmethod
+    def load_from_file(cls):
+        '''
+        A class method that returns a list of instances:
+        Args:
+            cls: the class itself
+        '''
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, 'r') as my_file:
+                json_string = my_file.read()
+                return Base.from_json_string(json_string)
+        except FileNotFoundError:
+            return []
+
     @staticmethod
     def draw(list_rectangles, list_squares):
         '''
