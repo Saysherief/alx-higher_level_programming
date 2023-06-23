@@ -100,7 +100,8 @@ class Base:
         try:
             with open(filename, 'r') as my_file:
                 json_string = my_file.read()
-                return Base.from_json_string(json_string)
+                dict_list = cls.from_json_string(json_string)
+                return [cls.create(**dic) for dic in dict_list]
         except FileNotFoundError:
             return []
 
