@@ -73,3 +73,48 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''
+        A class method that returns an instance with all attributes already set
+        Args:
+            cls: the class itself
+            dictionary: used as kwargs of the update method
+        '''
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        '''
+        Static method that opens a window and draws all the Rectangles and
+        Squares
+        Args:
+            list_rectangles: list of instances rectangles
+            list_squares: list of instances of squares
+        '''
+        t = turtle.Turtle()
+        turtle.setup(width=600, height=300)
+        turtle.setworldcoordinates(-300, -300, 300, 300)
+        for rect in list_rectangles:
+            t.penup()
+            t.goto(rect.x, rect.y)
+            t.pendown()
+            for _ in range(2):
+                t.forward(rect.width)
+                t.left(90)
+                t.forward(rect.height)
+                t.left(90)
+        for square in list_squares:
+            t.penup()
+            t.goto(square.x, square.y)
+            t.pendown()
+            for _ in range(4):
+                t.forward(square.size)
+                t.left(90)
+        turtle.done()
