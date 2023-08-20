@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-That lists all states from the database hbtn_0e_0_usa
+That lists all states that start with N from the database hbtn_0e_0_usa
 """
 
 import sys
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     ''' Execute the query to fetch all states '''
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
-    ''' Fetch all rows then display all states row by row'''
+    ''' Fetch all rows then display all states in new line'''
     rows = cursor.fetchall()
     for row in rows:
         print(row)
