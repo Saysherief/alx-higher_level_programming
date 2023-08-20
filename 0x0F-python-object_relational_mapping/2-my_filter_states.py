@@ -27,8 +27,8 @@ if __name__ == '__main__':
     cursor = conn.cursor()
 
     ''' Execute the query to fetch all states '''
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY
-    id ASC".format(state)
+    query = "SELECT * FROM states WHERE name = "
+    query += "'{}' ORDER BY id ASC".format(state)
     cursor.execute(query)
 
     ''' Fetch all rows then display all states in new line'''
