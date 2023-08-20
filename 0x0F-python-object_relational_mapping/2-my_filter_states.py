@@ -12,7 +12,7 @@ if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    stateName = sys.argv[4]
+    state = sys.argv[4]
 
     ''' Connect to MySQL server '''
     conn = MySQLdb.connect(
@@ -27,8 +27,8 @@ if __name__ == '__main__':
     cursor = conn.cursor()
 
     ''' Execute the query to fetch all states '''
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
-    .format(stateName)
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY
+    id ASC".format(state)
     cursor.execute(query)
 
     ''' Fetch all rows then display all states in new line'''
