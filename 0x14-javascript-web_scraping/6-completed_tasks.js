@@ -8,7 +8,7 @@ request.get(apiUrl, (err, response, body) => {
     const todos = JSON.parse(body);
     todos.forEach(todo => {
       if (todo.completed) {
-	const userId = String(todo.userId);
+        const userId = String(todo.userId);
         taskNo[userId] = (taskNo[userId] || 0) + 1;
       }
     });
